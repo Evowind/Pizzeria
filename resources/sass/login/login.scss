@@ -1,0 +1,132 @@
+a,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.text {
+    font-family: inherit;
+    line-height: inherit;
+    text-transform: unset;
+    text-rendering: optimizeLegibility;
+
+    &-large {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+    &-normal {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--text-color);
+    }
+
+    &-links {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--primary-color);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.wrapper {
+    max-width: 28rem;
+    width: 100%;
+    margin: 3rem auto;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    box-shadow: var(--shadow-large);
+}
+
+.form {
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+}
+
+.input-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.input-field {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: inherit;
+    width: 100%;
+    height: auto;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: var(--color-black);
+    background: var(--color-light);
+    text-transform: unset;
+    text-rendering: optimizeLegibility;
+
+    &:focus {
+        border: 1px solid var(--primary-color);
+    }
+}
+
+.input-submit {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    cursor: pointer;
+    min-width: 40%;
+    height: auto;
+    padding: 0.65rem 1.25rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: var(--color-white);
+    background: var(--primary-color);
+    box-shadow: var(--shadow-medium);
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+    margin-top: 4rem;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background: var(--primary-accent);
+    }
+}
+
+.success {
+    margin-top: 3rem;
+    color: (--success);
+    background: var(--success-light);
+    border: 1px solid #c3e6cb;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}

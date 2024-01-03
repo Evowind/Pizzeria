@@ -1,0 +1,489 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik&display=swap);
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-accent: #4b40ce;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    --header-bg: #F6F5FF;
+    --color-white: #ffffff;
+    --color-light: #f1f5f9;
+    --color-black: #121212;
+    --color-night: #001632;
+    --color-red: #f44336;
+    --color-blue: #1a73e8;
+    --color-blue-accent: #195aaf;
+    --color-gray: #80868b;
+    --color-grayish: #dadce0;
+    --err: #721c24;
+    --err-light: #f8d7da;
+    --success: #155724;
+    --success-light: #d4edda;
+    --shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--color-black);
+    background: var(--body-color);
+}
+
+.ok {
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    background-color: #d4edda;
+    border-radius: 7px;
+    padding: 8px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.ok i {
+    margin: 0 0.5rem;
+}
+
+.warn {
+    color: #856404;
+    border: 1px solid #ffeeba;
+    background-color: #fff3cd;
+    border-radius: 7px;
+    padding: 8px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.warn i {
+    margin: 0 0.5rem;
+}
+
+.error {
+    margin: 1rem 0;
+    color: var(--err);
+    border: 1px solid var(--err);
+    background-color: var(--err-light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.text {
+    font-family: inherit;
+    line-height: inherit;
+    text-transform: unset;
+    text-rendering: optimizeLegibility;
+}
+
+.text-large {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.text-normal {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.text-links {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.text-links:hover {
+    text-decoration: underline;
+}
+
+.table-wrapper {
+    width: 100%;
+    padding: 1rem 3rem;
+}
+
+.table-wrapper .add button {
+    transition: var(--tran-03);
+    font-size: 1rem;
+    color: var(--sidebar-color);
+    background: var(--primary-color);
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-medium);
+}
+
+.table-wrapper .add :hover {
+    background: var(--primary-accent);
+}
+
+.table-wrapper .table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: var(--shadow-large);
+    color: var(--text-color);
+}
+
+.table-wrapper .table thead {
+    text-align: left;
+    background: var(--header-bg);
+}
+
+.table-wrapper .table thead th {
+    padding: 0.5rem 1rem;
+}
+
+.table-wrapper .table tbody {
+    background: var(--sidebar-color);
+}
+
+.table-wrapper .table tbody td {
+    padding: 0.5rem 1rem;
+}
+
+.table-wrapper .table tbody .actions {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.table-wrapper .table tbody .actions .controls {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.table-wrapper .table tbody .actions .controls a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.table-wrapper .table tbody .actions .controls button {
+    width: 4vh;
+    height: 4vh;
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.table-wrapper .table tbody .actions .controls button:hover {
+    cursor: pointer;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--tran-03);
+    opacity: 0;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-container .modal {
+    color: var(--text-color);
+    background-color: var(--sidebar-color);
+    width: 30%;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+}
+
+.modal-container .modal .close {
+    font-size: 1.4rem;
+    color: var(--primary-accent);
+}
+
+.sidebar.close ~ .home .modal-container {
+    width: calc(100% - 78px);
+}
+
+.home .modal-container {
+    width: calc(100% - 250px);
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.settings-container {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.settings-container .settings-wrapper {
+    margin: 2rem 0 2rem 4rem;
+    width: 300px;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    background: var(--sidebar-color);
+}
+
+.settings-container .settings-wrapper form {
+    margin: 1rem 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.settings-container .settings-wrapper form h3 {
+    color: var(--text-color);
+}
+
+.settings-container .settings-wrapper form .inputs {
+    margin-top: 1rem;
+}
+
+.settings-container .settings-wrapper .pad {
+    margin: 0.7rem 0;
+}
+
+.order-container .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-container .top .cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 5%;
+}
+
+.order-container .top .cart p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.order-container .top .cart a i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.order-container .spacer {
+    margin-bottom: 10vh;
+}
+
+.order-container .addtocart {
+    background: var(--primary-color);
+    color: var(--sidebar-color);
+    padding: 0.6rem 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.order-container .controls {
+    margin: 0;
+    width: 15%;
+}
+
+.order-container .controls .quantity-selector {
+    background: var(--sidebar-color);
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-container .controls .quantity-selector .quantity-value input {
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    font-weight: 500;
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.order-container .controls .quantity-selector .inc, .order-container .controls .quantity-selector .dec {
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    color: var(--text-color);
+}
+
+.sidebar.close ~ .home .add-modal-container {
+    width: calc(100% - 78px);
+}
+
+.home .add-modal-container {
+    width: calc(100% - 250px);
+}
+
+.envoye {
+    color: #856404;
+    background-color: #fff3cd;
+}
+
+.traitement {
+    background: #ceefff;
+    color: #0b89a2;
+}
+
+.pret {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.recupere {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 3rem 0;
+}
+
+.filter .params {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2rem;
+}
+
+.filter .params .send {
+    background: var(--header-bg);
+    padding: 1rem 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+}
+
+.sel, .date {
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    background: var(--header-bg);
+    padding: 2% 5%;
+    color: var(--text-color);
+}
+
+.btn {
+    margin-top: 1rem;
+    background: var(--header-bg);
+    padding: 0.6rem 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+}
+
+.tcart tr:last-child td:first-child {
+    border-bottom-left-radius: 0px;
+}
+
+.tcart tr:last-child td:last-child {
+    border-bottom-right-radius: 0px;
+}
+
+.tcart tfoot {
+    background: var(--header-bg);
+}
+
+.tcart tfoot td:nth-child(3) p {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.tcart tfoot tr:last-child td:first-child {
+    border-bottom-left-radius: 10px !important;
+}
+
+.tcart tfoot tr:last-child td:last-child {
+    border-bottom-right-radius: 10px !important;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0;
+    width: 10vw;
+    font-size: 1.1rem;
+    background: var(--header-bg);
+}
+
+.pagination .page-item {
+    padding: 0 1rem;
+}
+
+.pagination .page-link {
+    text-decoration: none;
+}
+
+.pagination .active {
+    background: var(--primary-color);
+    color: var(--sidebar-color);
+}

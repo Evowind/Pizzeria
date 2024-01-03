@@ -1,0 +1,1 @@
+@extends('components.user.nav')

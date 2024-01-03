@@ -1,0 +1,8 @@
+# Ignore les fichiers générés par PHPStorm
+.idea/
+
+# Ignore les fichiers de configuration PHP
+php.ini
+
+# Ignore les fichiers de cache PHP
+/vendor/

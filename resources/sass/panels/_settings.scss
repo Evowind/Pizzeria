@@ -1,0 +1,35 @@
+.settings-container {
+    width: 100%;
+    padding: 1rem 2rem;
+
+    & .settings-wrapper {
+        margin: 2rem 0 2rem 4rem;
+        width: 300px;
+
+        padding: 1.5rem 1rem;
+        border-radius: 10px;
+        box-shadow: var(--shadow-medium);
+        background: var(--sidebar-color);
+
+        & form {
+            margin: 1rem 0;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & h3 {
+                color: var(--text-color);
+            }
+
+            .inputs {
+                margin-top: 1rem;
+            }
+        }
+
+        & .pad {
+            margin: .7rem 0;
+        }
+
+    }
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik&display=swap');
+
+:root {
+
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-accent: #4b40ce;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    --header-bg: #F6F5FF;
+
+    --color-white: #ffffff;
+    --color-light: #f1f5f9;
+    --color-black: #121212;
+    --color-night: #001632;
+
+    --color-red: #f44336;
+    --color-blue: #1a73e8;
+    --color-blue-accent: #195aaf;
+    --color-gray: #80868b;
+    --color-grayish: #dadce0;
+
+    --err: #721c24;
+    --err-light: #f8d7da;
+
+    --success: #155724;
+    --success-light: #d4edda;
+
+    --shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--color-black);
+    background: var(--body-color);
+}
+
+.ok {
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    background-color: #d4edda;
+    border-radius: 7px;
+    padding: 8px;
+    margin: 1rem 0;
+
+    display: flex;
+    align-items: center;
+
+    & i {
+        margin: 0 .5rem;
+    }
+}
+
+.warn {
+    color: #856404;
+    border: 1px solid #ffeeba;
+    background-color: #fff3cd;
+    border-radius: 7px;
+    padding: 8px;
+    margin: 1rem 0;
+
+    display: flex;
+    align-items: center;
+
+    & i {
+        margin: 0 .5rem;
+    }
+}
+
+.error {
+    margin: 1rem 0;
+    color: var(--err);
+    border: 1px solid var(--err);
+    background-color: var(--err-light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.text {
+    font-family: inherit;
+    line-height: inherit;
+    text-transform: unset;
+    text-rendering: optimizeLegibility;
+}
+
+.text-large {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.text-normal {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.text-links {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.text-links:hover {
+    text-decoration: underline;
+}
+
+@import './panels/pizzas';
+@import './panels/settings';
+@import './panels/order';
+@import './panels/cart';
